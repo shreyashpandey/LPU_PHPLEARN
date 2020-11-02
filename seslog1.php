@@ -1,0 +1,19 @@
+<?php 
+session_start();
+$u="s1";
+$p="p";
+if(isset($_POST["s"]))
+{
+    if($_POST["i1"]==$u&&$_POST["i2"]==$p)
+    {
+        $_SESSION["user"]=$u;
+        $_SESSION["password"]=$p;
+    }
+}
+print_r($_SESSION);
+?>
+<html>
+<body>
+<a href="seslogout.php">Logout</a>
+</body>
+</html>
